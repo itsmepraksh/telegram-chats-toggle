@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    .dark{
+        .elem1{
+            color: whitesmoke;
+        }
+        background-color: #233041;
+        .chats{
+            background-color: #233041;
+            color: whitesmoke;
+        }
+        footer{
+            color: azure;
+            i:nth-child(3){
+                color: black;
+            }
+        }
+    }
+    main{
+        
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .elem1{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem; 
+            .logo{
+                display: flex;
+                h1{
+                    font-weight: 400;
+                }
+            img{ 
+                object-fit: cover;
+                width: 5rem; 
+            }
+
+            }
+            .mode{
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+            .mode:active{
+                scale: 0.9;
+            }
+        }
+
+        .elem2{ 
+            height: 12rem;
+            width: 100%;  
+            display: flex;
+            gap: 1rem;
+            overflow-x: scroll;
+            padding: 1rem;
+            .box{  
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                 
+                width: 8rem; 
+                aspect-ratio: 1/1;
+                background-color: #6CC0E2;
+                border-radius: 25px;
+
+                i{
+                    margin-top: auto;
+                    font-size: 1.75rem;
+                    opacity: 70%;
+                    padding: 0.5rem 0;
+                }
+                p{
+                    font-size: 0.9rem;
+                    font-weight: 500;
+                    opacity: 70%;
+                }
+            }
+            .box:nth-child(2){
+                background-color: #9DC7DF;
+            }
+        }
+        .elem2::-webkit-scrollbar {
+            display: none;  
+          }
+        .chats{
+            height: 60%; 
+            background-color: gainsboro;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            overflow-y: scroll;
+
+            .chat{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                .chat-in{
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                img{
+                    width: 4rem;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                .chat-dets{
+                    h2{
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                    }
+                    h5{ 
+                        font-weight: 400;
+                    }
+                    
+                }
+
+                }
+                .chat-time{
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                }
+            }
+        }
+        .chats::-webkit-scrollbar {
+            display: none;  
+          }
+
+        footer{
+            margin-top: auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            i{
+                font-size: 1.75rem;
+            }
+            i:nth-child(3){
+                background-color: #6DC0E2;
+                padding: 1.25rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}
